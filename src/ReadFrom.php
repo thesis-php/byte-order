@@ -4,9 +4,8 @@ declare(strict_types=1);
 
 namespace Thesis\ByteOrder;
 
-use Amp\Cancellation;
 use Thesis\ByteReader\Reader;
-use Thesis\ByteReader\ReaderIsClosed;
+use Thesis\ByteReader\UnexpectedEof;
 use Thesis\Endian\endian;
 
 /**
@@ -15,56 +14,56 @@ use Thesis\Endian\endian;
 interface ReadFrom extends Reader
 {
     /**
-     * @throws ReaderIsClosed
+     * @throws UnexpectedEof
      */
-    public function readInt8(endian $endian = endian::network, ?Cancellation $cancellation = null): int;
+    public function readInt8(endian $endian = endian::network): int;
 
     /**
      * @return non-negative-int
-     * @throws ReaderIsClosed
+     * @throws UnexpectedEof
      */
-    public function readUint8(endian $endian = endian::network, ?Cancellation $cancellation = null): int;
+    public function readUint8(endian $endian = endian::network): int;
 
     /**
-     * @throws ReaderIsClosed
+     * @throws UnexpectedEof
      */
-    public function readInt16(endian $endian = endian::network, ?Cancellation $cancellation = null): int;
-
-    /**
-     * @return non-negative-int
-     * @throws ReaderIsClosed
-     */
-    public function readUint16(endian $endian = endian::network, ?Cancellation $cancellation = null): int;
-
-    /**
-     * @throws ReaderIsClosed
-     */
-    public function readInt32(endian $endian = endian::network, ?Cancellation $cancellation = null): int;
+    public function readInt16(endian $endian = endian::network): int;
 
     /**
      * @return non-negative-int
-     * @throws ReaderIsClosed
+     * @throws UnexpectedEof
      */
-    public function readUint32(endian $endian = endian::network, ?Cancellation $cancellation = null): int;
+    public function readUint16(endian $endian = endian::network): int;
 
     /**
-     * @throws ReaderIsClosed
+     * @throws UnexpectedEof
      */
-    public function readInt64(endian $endian = endian::network, ?Cancellation $cancellation = null): int;
+    public function readInt32(endian $endian = endian::network): int;
 
     /**
      * @return non-negative-int
-     * @throws ReaderIsClosed
+     * @throws UnexpectedEof
      */
-    public function readUint64(endian $endian = endian::network, ?Cancellation $cancellation = null): int;
+    public function readUint32(endian $endian = endian::network): int;
 
     /**
-     * @throws ReaderIsClosed
+     * @throws UnexpectedEof
      */
-    public function readFloat(endian $endian = endian::network, ?Cancellation $cancellation = null): float;
+    public function readInt64(endian $endian = endian::network): int;
 
     /**
-     * @throws ReaderIsClosed
+     * @return non-negative-int
+     * @throws UnexpectedEof
      */
-    public function readDouble(endian $endian = endian::network, ?Cancellation $cancellation = null): float;
+    public function readUint64(endian $endian = endian::network): int;
+
+    /**
+     * @throws UnexpectedEof
+     */
+    public function readFloat(endian $endian = endian::network): float;
+
+    /**
+     * @throws UnexpectedEof
+     */
+    public function readDouble(endian $endian = endian::network): float;
 }

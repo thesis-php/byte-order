@@ -3,7 +3,7 @@
 ## Installation
 
 ```shell
-composer require thesis/byteorder
+composer require thesis/byte-order
 ```
 
 ## Basic usage
