@@ -11,6 +11,7 @@ $config = (new Config())
     ->setFinder(
         Finder::create()
             ->in(__DIR__ . '/src')
+            ->in(__DIR__ . '/tests')
             ->append([
                 __FILE__,
             ]),
@@ -18,6 +19,8 @@ $config = (new Config())
     ->setParallelConfig(ParallelConfigFactory::detect())
     ->setCacheFile(__DIR__ . '/var/' . basename(__FILE__) . '.cache');
 
-(new PhpCsFixerCodingStandard())->applyTo($config);
+(new PhpCsFixerCodingStandard())->applyTo($config, [
+    // 'rule' => ['overridden' => 'config'],
+]);
 
 return $config;

@@ -1,5 +1,7 @@
-/**/vendor/
 /var/
+/vendor/
+/.env.local
 /.php-cs-fixer.php
+/compose.override.yaml
 /phpstan.neon
-/psalm.xml
+/phpunit.xml
