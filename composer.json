@@ -28,11 +28,6 @@
             "Thesis\\ByteOrder\\": "src/"
         }
     },
-    "autoload-dev": {
-        "psr-4": {
-            "Thesis\\ByteOrder\\": "tests/"
-        }
-    },
     "config": {
         "allow-plugins": {
             "ergebnis/composer-normalize": true
