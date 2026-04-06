@@ -29,9 +29,6 @@
         }
     },
     "config": {
-        "allow-plugins": {
-            "ergebnis/composer-normalize": true
-        },
         "lock": false,
         "sort-packages": true
     }
