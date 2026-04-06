@@ -9,4 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Bump PHP to `^8.4`.
+- Bump PHP to `8.4`.
+- Bump `thesis/endian` to `^0.3.2`.
+- Require `ext-bcmath`.
+- **BC break:** Change `endian $endian` to `Order $order` in `ReadFrom` and `WriteTo` method parameters.
+- **BC break:** Change `readInt64()` and `readUint64()` return type to `BcMath\Number`.
+- **BC break:** Change `writeInt64($v)` and `writeUint64($v)` param type to `BcMath\Number`.
