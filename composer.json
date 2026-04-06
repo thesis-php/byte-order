@@ -18,7 +18,7 @@
         }
     ],
     "require": {
-        "php": "^8.3",
+        "php": "^8.4",
         "thesis/byte-reader": "^0.3.1",
         "thesis/byte-writer": "^0.2.2",
         "thesis/endian": "^0.1.0"
