@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Widen `WriteTo::writeInt*($v)` param types to `int`.
+- Bump `thesis/endian` to `0.3.3`.
 
 ## [0.4.0] 2026-04-06
 

@@ -22,7 +22,7 @@
         "ext-bcmath": "*",
         "thesis/byte-reader": "^0.3.1",
         "thesis/byte-writer": "^0.2.2",
-        "thesis/endian": "^0.3@dev"
+        "thesis/endian": "^0.3.3"
     },
     "autoload": {
         "psr-4": {
